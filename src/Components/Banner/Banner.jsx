@@ -7,8 +7,8 @@ const Banner = () => {
         <div className="font-[Boldonse]">
             <h1 className="text-5xl text-center mt-56">Welcome To MyNotesApp!</h1>
             <div className="flex justify-center my-10 gap-5">
-            <Button text="Explore"/>            
-            <Button text="Start Typing"/>
+            <Button text="Explore" href="/aboutUs"/>            
+            <Button text="Start Typing" href="/notes"/>
             </div>            
             <div className="absolute bottom-0 w-full">
             <img src={wave} className="w-full"  alt="" />

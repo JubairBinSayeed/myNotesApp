@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Notes from '../Components/Notes/Notes';
 import PinnedNotes from '../Components/PinnedNotes/PinnedNotes';
 import Register from '../Components/Register/Register';
+import AboutUs from '../Components/AboutUs/AboutUs';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element: <Register/>,
+      },
+      {
+        path:'/aboutUs',
+        element: <AboutUs/>,
       }
     ]
   }
