@@ -13,7 +13,12 @@ const Navbar = () => {
                 <NavLink to="/" className={({ isActive }) => (isActive ? 'text-yellow-500  font-bold' : 'font-bold')}><span className="mr-5">Home</span></NavLink>
                 <NavLink to="/notes" className={({ isActive }) => (isActive ? 'text-yellow-500 font-bold' : 'font-bold')}><span className="mr-5">Notes</span></NavLink>
                 <NavLink to="/pinnednotes" className={({ isActive }) => (isActive ? 'text-yellow-500 font-bold' : 'font-bold')}><span className="mr-5">PinnedNotes</span></NavLink>
-                <img src={register} className="w-[50px]"  alt="" />
+                <NavLink to="/register" className={({ isActive }) => (isActive ? 'indicator font-bold' : 'font-bold')}>
+                {/* <span className="indicator-item status status-success "></span> */}
+                <NavLink to="/register" className={({ isActive }) => (isActive ? 'indicator-item status status-success w-3 h-3' : 'indicator-item status status-error w-3 h-3')}>
+                </NavLink>
+                        <img src={register} className="w-[50px]"  alt="" />
+                </NavLink>
               </ul>
             </div>
           </div>

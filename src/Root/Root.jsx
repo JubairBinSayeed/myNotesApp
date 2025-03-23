@@ -5,6 +5,7 @@ import Notes from '../Components/Notes/Notes';
 import PinnedNotes from '../Components/PinnedNotes/PinnedNotes';
 import Register from '../Components/Register/Register';
 import AboutUs from '../Components/AboutUs/AboutUs';
+import Login from '../Components/Login/Login';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path:'/aboutUs',
         element: <AboutUs/>,
+      },
+      {
+        path:'/login',
+        element: <Login/>,
       }
     ]
   }

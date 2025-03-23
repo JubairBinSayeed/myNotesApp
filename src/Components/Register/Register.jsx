@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import register from "../../assets/register-two.png"
 
 const Register = () => {
@@ -21,6 +22,7 @@ const Register = () => {
   <input type="password" required placeholder="Password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
 </label><br />
 <button className="btn  w-96 bg-yellow-500 border-yellow-500   text-2xl ">Register</button>
+<p>Already have an account ? Click here to <Link to="/login" className="text-blue-500 font-bold hover:underline hover:text-blue-600">login</Link></p>
             </div>
             </div>
         </div>
