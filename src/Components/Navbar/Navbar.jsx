@@ -6,7 +6,7 @@ const Navbar = () => {
         <div>
           <div className="navbar bg-base-100 shadow-sm font-[Boldonse]">
             <div className="flex-1">
-              <Link to='/' className="btn btn-ghost text-xl gap-0"> MyNotes<span className="text-yellow-500">App</span></Link>
+              <Link to='/' className="btn btn-ghost text-xl gap-0"> MyNote<span className="text-yellow-500">App</span></Link>
             </div>
             <div className="flex-none">
               <ul className="menu menu-horizontal px-1 items-center">
