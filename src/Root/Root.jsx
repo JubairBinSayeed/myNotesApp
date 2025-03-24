@@ -22,10 +22,6 @@ const router = createBrowserRouter([
         element: <Notes/>,
       },
       {
-        path:'/pinnednotes',
-        element: <PinnedNotes/>,
-      },
-      {
         path:'/register',
         element: <Register/>,
       },
