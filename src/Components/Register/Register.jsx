@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import register from "../../assets/register-two.png";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { toast } from "react-toastify";
-import { auth } from "../../firebase.config";
-
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import toast from "react-hot-toast";
 const Register = () => {
+  const {createUser} = useContext(AuthContext);
+  
   const handleRegister = (e) => {
     e.preventDefault();
     const username = e.target.username.value;
@@ -14,15 +15,13 @@ const Register = () => {
     console.log("User 's email is :",email);
     console.log("User 's password is :",password);
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser(email,password)
     .then(result => {
       console.log(result.user);
-      toast.success("User registration successfull!");
+      toast.success("User registration successfull")
     })
     .catch(error => {
-      console.error(error.message);
-      toast.error(error.message);
-      toast.error("User already exists!");
+      console.error(error)
     })
   };
 
@@ -87,7 +86,12 @@ const Register = () => {
               />
             </label>
             <br />
-
+            <p className="text-2xl font-bold">Password conditions:</p>
+              <ol className="mb-5">
+                <li>* Password must be more than 8 characters</li>
+                <li>* Password must include a number</li>
+                <li>* Password must contain a lowercase and uppercase letter</li>
+              </ol>
             <input type="submit" value="Register" className="btn w-96 bg-yellow-500 border-yellow-500 text-2xl" />
           </form>
 
