@@ -8,10 +8,8 @@ const Register = () => {
   
   const handleRegister = (e) => {
     e.preventDefault();
-    const username = e.target.username.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log("User 's name is :",username);
     console.log("User 's email is :",email);
     console.log("User 's password is :",password);
 
@@ -32,27 +30,7 @@ const Register = () => {
         <h1 className="text-center text-3xl font-bold flex justify-center">Register Your Account</h1>
         <div className="ml-14">
           <form onSubmit={handleRegister}>
-            <label className="input validator w-96 my-5 flex items-center gap-2">
-              <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
-                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </g>
-              </svg>
-              <input
-                name="username"
-                className="w-full outline-none"
-                type="text"
-                required
-                placeholder="Username"
-                pattern="[A-Za-z][A-Za-z0-9\-]*"
-                minLength="3"
-                maxLength="30"
-                title="Only letters, numbers, or dashes allowed"
-              />
-            </label>
-
-            <label className="input validator mb-5 w-96">
+            <label className="input validator my-5 w-96">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
