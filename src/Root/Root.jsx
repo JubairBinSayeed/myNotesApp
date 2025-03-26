@@ -6,6 +6,8 @@ import Register from '../Components/Register/Register';
 import AboutUs from '../Components/AboutUs/AboutUs';
 import Login from '../Components/Login/Login';
 import ErrorElement from '../Components/ErrorElement/ErrorElement';
+import Accounts from '../Components/Accounts/Accounts';
+import PrivateRoute from '../Components/PrivateRoute/PrivateRoute';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/notes',
-        element: <Notes/>,
+        element: <PrivateRoute><Notes/></PrivateRoute>,
       },
       {
         path:'/register',
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login/>,
+      },
+      {
+        path:'/accounts',
+        element: <Accounts/>,
       }
     ]
   }
